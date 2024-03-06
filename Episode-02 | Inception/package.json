@@ -1,0 +1,11 @@
+{
+  "name": "episode02inception",
+  "version": "1.0.0",
+  "description": "This is Namaste React by Akshay Saini, Episode 02",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Sritaj",
+  "license": "ISC"
+}
