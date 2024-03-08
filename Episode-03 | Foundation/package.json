@@ -1,7 +1,7 @@
 {
   "name": "episode03foundation",
   "version": "1.0.0",
-  "description": "Namaste React 3rd chapter"
+  "description": "Namaste React 3rd chapter",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
