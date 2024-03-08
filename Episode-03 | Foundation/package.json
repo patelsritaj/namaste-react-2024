@@ -4,7 +4,8 @@
   "description": "Namaste React 3rd chapter",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel start.html"
+    "start": "parcel start.html",
+    "build": "parcel build start.html"
   },
   "keywords": [
     "react"
