@@ -9,6 +9,8 @@ import ReactDOM from "react-dom/client";
  * -- Search
  * -- RestaurantContainer
  *    -- RestaurantCard
+ *         --- Img
+ *         --- Name of res, rating
  * Footer
  * -- Copyright
  * -- Links
@@ -38,10 +40,30 @@ const Header = () => {
   );
 };
 
+const RestaurantCard = () => {
+  return (
+    <div className="res-card">
+      <h3>Meghna Foods</h3>
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search"></div>
+      <div className="res-container">
+        <RestaurantCard />
+      </div>
+    </div>
+  );
+};
+
 const AppLayout = () => {
   return (
     <div className="app">
       <Header />
+      <Body />
     </div>
   );
 };
