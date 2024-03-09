@@ -20,3 +20,34 @@
   padding: 10px;
   margin: 10px;
 }
+
+.res-card {
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  height: auto;
+  border: 1px solid turquoise;
+}
+
+.res-card:hover {
+  cursor: pointer;
+  border: 1px solid crimson;
+}
+
+.res-food {
+  width: 200px;
+}
+
+.search {
+  padding: 10px;
+}
+
+.moreinfo {
+  display: flex;
+  padding: 2px;
+}
+
+.moreinfo > li {
+  list-style-position: inside;
+  list-style: none;
+}
