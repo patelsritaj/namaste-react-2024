@@ -46,7 +46,10 @@ const RestaurantCard = (props) => {
     <div className="res-card">
       <img
         className="res-food"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/slheenytwb3iaypqf4yd"
+        src={
+          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
+          resData.info.cloudinaryImageId
+        }
         alt="popular food image"
       ></img>
       <h4>{resData.info.name}</h4>
@@ -56,9 +59,9 @@ const RestaurantCard = (props) => {
         <li>{resData.info.cuisines[2]}</li>
       </ul>
       <ul className="moreinfo resdetails">
-        <li>4.5 stars</li>
-        <li>ETA - 38 mins</li>
-        <li>500 per two</li>
+        <li>{resData.info.avgRating}</li>
+        <li>{resData.info.sla.slaString}</li>
+        <li>{resData.info.costForTwo}</li>
       </ul>
     </div>
   );
