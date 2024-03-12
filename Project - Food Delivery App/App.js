@@ -40,7 +40,8 @@ const Header = () => {
   );
 };
 
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+  const { resData } = props;
   return (
     <div className="res-card">
       <img
@@ -48,9 +49,9 @@ const RestaurantCard = () => {
         src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/slheenytwb3iaypqf4yd"
         alt="popular food image"
       ></img>
-      <h4>Meghana Foods</h4>
+      <h4>{resData.info.name}</h4>
       <ul className="moreinfo top3items">
-        <li>Chicken Biryani</li>
+        <li>Dummy</li>
         <li>Kabab</li>
         <li>Chicken Masala</li>
       </ul>
@@ -137,19 +138,7 @@ const Body = () => {
     <div className="body">
       <div className="search">Search</div>
       <div className="res-container">
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
+        <RestaurantCard resData={resObj} />
       </div>
     </div>
   );
