@@ -51,9 +51,9 @@ const RestaurantCard = (props) => {
       ></img>
       <h4>{resData.info.name}</h4>
       <ul className="moreinfo top3items">
-        <li>Dummy</li>
-        <li>Kabab</li>
-        <li>Chicken Masala</li>
+        <li>{resData.info.cuisines[0]}</li>
+        <li>{resData.info.cuisines[1]}</li>
+        <li>{resData.info.cuisines[2]}</li>
       </ul>
       <ul className="moreinfo resdetails">
         <li>4.5 stars</li>
