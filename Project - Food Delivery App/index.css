@@ -36,6 +36,11 @@
   border: 1px solid turquoise;
 }
 
+.res-food {
+  height: 130px;
+  width: 200px;
+}
+
 .res-card:hover {
   cursor: pointer;
   border: 1px solid crimson;
