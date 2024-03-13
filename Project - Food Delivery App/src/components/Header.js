@@ -1,10 +1,12 @@
+import { LOGO_URL } from "../utils/constants";
+
 const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
         <img
           className="logo"
-          src="https://www.clipartmax.com/png/small/111-1118804_android-food-delivery-apps.png"
+          src={LOGO_URL}
           alt="Android Food Delivery Apps @clipartmax.com"
         ></img>
       </div>

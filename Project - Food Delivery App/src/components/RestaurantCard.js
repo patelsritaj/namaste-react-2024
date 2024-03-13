@@ -1,3 +1,5 @@
+import { CDN_URL } from "../utils/constants";
+
 const RestaurantCard = (props) => {
   const { resData } = props;
   const { cloudinaryImageId, cuisines, avgRating, slaString, costForTwo, sla } =
@@ -6,10 +8,7 @@ const RestaurantCard = (props) => {
     <div className="res-card">
       <img
         className="res-food"
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
-        }
+        src={CDN_URL + cloudinaryImageId}
         alt="popular food image"
       ></img>
       <h4>{resData.info.name}</h4>
