@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import resObj from "../utils/mockdata";
 import { useEffect, useState } from "react";
+import ShimmerUI from "./Shimmer";
 
 const Body = () => {
   const [restaurantObj, setRestaurantObj] = useState([]);
@@ -24,7 +25,7 @@ const Body = () => {
   };
 
   if (restaurantObj.length === 0) {
-    return <h1>Loading ...</h1>;
+    return <ShimmerUI />;
   }
 
   return (
