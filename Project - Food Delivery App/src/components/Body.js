@@ -20,15 +20,15 @@ const Body = () => {
     console.log(json);
 
     setRestaurantObj(
+      //Optional Chaining
       json.data?.cards?.[4].card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
-  if (restaurantObj.length === 0) {
-    return <ShimmerUI />;
-  }
-
-  return (
+  //Conditional Rendering
+  return restaurantObj.length === 0 ? (
+    <ShimmerUI />
+  ) : (
     <div className="body">
       <div className="filter">
         <button
