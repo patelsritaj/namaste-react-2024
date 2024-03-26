@@ -28,6 +28,10 @@ const Body = () => {
   ) : (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input type="text" className="search-bar"></input>
+          <button>Search</button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => {
