@@ -4,6 +4,7 @@ import ShimmerUI from "./Shimmer";
 
 const Body = () => {
   const [restaurantObj, setRestaurantObj] = useState([]);
+  const [filteredRestaurantObj, setFilteredRestaurantObj] = useState([]);
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
@@ -19,6 +20,10 @@ const Body = () => {
 
     setRestaurantObj(
       //Optional Chaining
+      json.data?.cards?.[4].card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+
+    setFilteredRestaurantObj(
       json.data?.cards?.[4].card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
@@ -40,12 +45,10 @@ const Body = () => {
           ></input>
           <button
             onClick={() => {
-              console.log("Test");
               const filteredResListBySearchText = restaurantObj.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
-              console.log(filteredResListBySearchText);
-              setRestaurantObj(filteredResListBySearchText);
+              setFilteredRestaurantObj(filteredResListBySearchText);
             }}
           >
             Search
@@ -57,14 +60,14 @@ const Body = () => {
             const filteredResListByRating = restaurantObj.filter(
               (res) => res.info.avgRating > 4.4
             );
-            setRestaurantObj(filteredResListByRating);
+            setFilteredRestaurantObj(filteredResListByRating);
           }}
         >
           Top Rated Restaurant
         </button>
       </div>
       <div className="res-container">
-        {restaurantObj.map((res) => (
+        {filteredRestaurantObj.map((res) => (
           <RestaurantCard key={res.info.id} resData={res} />
         ))}
       </div>
