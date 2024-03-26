@@ -1,5 +1,4 @@
 import RestaurantCard from "./RestaurantCard";
-import resObj from "../utils/mockdata";
 import { useEffect, useState } from "react";
 import ShimmerUI from "./Shimmer";
 
@@ -16,8 +15,6 @@ const Body = () => {
     );
 
     const json = await data.json();
-
-    console.log(json);
 
     setRestaurantObj(
       //Optional Chaining
